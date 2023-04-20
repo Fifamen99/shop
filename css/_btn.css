@@ -1,0 +1,21 @@
+.btn-222 {
+    background: rgba(127, 133, 162, 0.2);
+    border-radius: 9px;
+    min-width: 36px;
+    min-height: 36px;
+    display: inline-block;
+    color: var(--light-gray);
+    transition: color .2s;
+    text-align: center;
+    padding: 0;
+    line-height: 1.42;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-222 svg {
+    font-size: 16px;
+}
+.btn-222:hover {
+    color: var(--color-primary);
+}
