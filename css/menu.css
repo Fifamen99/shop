@@ -1,0 +1,25 @@
+.menu {}
+.menu .menu__logo {
+	max-width: 30px;
+	margin-right: 20px;
+}
+
+.menu .menu__nav{
+
+}
+
+.menu .menu__search:focus{
+	color: var(--bs-body-color);
+	border-color: #86b7fe;
+}
+
+.active{
+	background: var(--pr);
+	color: var(--bs-white);
+	border-radius: var(--bs-border-radius);
+}
+
+.active:focus, .active:hover{
+	color: var(--bs-white);
+}
+
