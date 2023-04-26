@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Сторінка товару</title>
+
+	<link rel="stylesheet" href="libs/boostrap/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+	<header class="p-3 mb-3 border-bottom menu">
+		<div class="container">
+			<div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+				<a href="/" class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none">
+					<img src="img/logo.png" alt="" class="menu__logo">
+				</a>
+
+				<ul class="menu__nav nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+					<li><a href="catalog.html" class="js-menu__nav-link nav-link px-2">Головна</a></li>
+					<li><a href="#" class="js-menu__nav-link nav-link px-2">Каталог</a></li>
+					<li><a href="#" class="js-menu__nav-link nav-link px-2 active">Перегляд товару</a></li>
+					<li><a href="#" class="js-menu__nav-link nav-link px-2">Контакти</a></li>
+				</ul>
+
+				<form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+					<input type="search" class="menu__search form-control" placeholder="Search..." aria-label="Search">
+				</form>
+
+				<div class="dropdown text-end">
+					<a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+						<img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+					</a>
+					<ul class="dropdown-menu text-small">
+						<li><a class="dropdown-item" href="#">Профіль</a></li>
+						<li><a class="dropdown-item" href="#">Замовлення</a></li>
+						<li><a class="dropdown-item" href="#">Обране</a></li>
+						<li><a class="dropdown-item" href="#">Переглянуте</a></li>
+						<li>
+							<hr class="dropdown-divider">
+						</li>
+						<li><a class="dropdown-item" href="#">Вийти</a></li>
+					</ul>
+				</div>
+				<div class="cart">
+
+					<ul class="cart-list-products position-absolute js-list-products hide">
+
+					</ul>
+					
+					<div class="cart-button btn-222 position-relative js-card-button">
+						<div class="order-num d-flex justify-content-center align-items-center js-order-num hide">0</div>
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="productPage w-100">
+		<div class="container">
+			<div class="product__view d-flex">
+				<div class="product__view-slider">
+					<div class="product-imgs">
+						<div class="img-display">
+							<div class="img-showcase d-flex w-100">
+								<img class="slider-img" src="img/productPage/airpots.jpg" alt="">
+								<img class="slider-img" src="img/productPage/airpots2.jpg" alt="">
+								<img class="slider-img" src="img/productPage/airpots3.jpg" alt="">
+								<img class="slider-img" src="img/productPage/airpots4.jpg" alt="">
+							</div>
+						</div>
+						<div class="img-select d-flex">
+							<div class="img-item">
+								<a href="#" data-id="1">
+									<img class="slider-img w-100 d-block" src="img/productPage/airpots.jpg" alt="">
+								</a>
+							</div>
+							<div class="img-item">
+								<a href="#" data-id="2">
+									<img class="slider-img w-100 d-block" src="img/productPage/airpots2.jpg" alt="">
+								</a>
+							</div>
+							<div class="img-item">
+								<a href="#" data-id="3">
+									<img class="slider-img w-100 d-block" src="img/productPage/airpots3.jpg" alt="">
+								</a>
+							</div>
+							<div class="img-item">
+								<a href="#" data-id="4">
+									<img class="slider-img w-100 d-block" src="img/productPage/airpots4.jpg" alt="">
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="product__view-info">
+					<div class="product__contant-info">
+						<h2 class="product__view-title">Навушники Apple AirPods Pro with Magsafe 2021 (MLWK3)</h2>
+						<div class="product__info-articl d-flex">
+							<p class="product__code">Код : 69739</p>
+							<p class="product__vendor-code">Артикул : MLWK3</p>
+						</div>
+						<div class="star-box">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+							  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+							</svg>
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+							  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+							</svg>
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+							  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+							</svg>
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+							  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+							</svg>
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+							  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+							</svg>
+						</div>
+						<div class="product__discount">
+							<div class="price-old d-flex align-items-center position-relative">
+								<span class="product__discount-price">8 441 грн</span>
+								<strong class="product__discount-percent">-246</strong>
+							</div>
+						</div>
+						<div class="price">
+							<div class="price__holder-usd d-flex">
+								<div class="price-uah position-relative price__usd-new">8 195 грн</div>
+								<div class="price__usd-new">216 $</div>
+							</div>
+							<div class="cashback-holder">
+								<span class="user__bonus-value">кешбек&nbsp<b>41 грн</b></span>
+							</div>
+						</div>
+						<div class="product_buy-btn">
+							<a href="#" class="buy-btn w-100">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+								Купити
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+	<footer class="py-3 my-4 footer">
+		<ul class="nav justify-content-center border-bottom pb-3 mb-3">
+			<li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Головна</a></li>
+			<li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Каталог</a></li>
+			<li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Перегляд товару</a></li>
+			<li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Контакти</a></li>
+		</ul>
+		<p class="text-center text-body-secondary">&copy; 2023 Company, Inc</p>
+	</footer>
+
+	<script src="libs/jquery-3.6.4.min.js"></script>
+	<script src="libs/boostrap/bootstrap.bundle.min.js"></script>
+	<script src="js/menu__nav.js"></script>
+	<script src="js/cart.js"></script>
+	<script src="js/product-slider.js"></script>
+	<script src="js/pageCart.js"></script>
+
+</body>
+
+</html>

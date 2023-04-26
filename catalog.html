@@ -45,6 +45,17 @@
 						<li><a class="dropdown-item" href="#">Вийти</a></li>
 					</ul>
 				</div>
+				<div class="cart">
+
+					<ul class="cart-list-products position-absolute js-list-products hide">
+
+					</ul>
+					
+					<div class="cart-button btn-222 position-relative js-card-button">
+						<div class="order-num d-flex justify-content-center align-items-center js-order-num hide">0</div>
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+					</div>
+				</div>
 			</div>
 		</div>
 	</header>
@@ -67,7 +78,7 @@
 							<div class="price">$1100</div>
 						</div>
 						<div class="content__button">
-							<button data-img="airpods.png" data-price="50" data-title="Airpod" data-count="1"  data-price-summ="50" class="cart-btn w-100 js-card-add">Додати в корзину</button>
+							<button data-img="Iphone 14pro.jpg" data-price="1100" data-title="Apple Iphone 14pro" data-text="Apple Iphone 14pro (Deep Purple)" data-count="1"  data-price-summ="1100" class="cart-btn w-100 js-card-add">Додати в корзину</button>
 						</div>
 					</div>
 				</div>
@@ -83,7 +94,7 @@
 							<div class="price">$30</div>
 						</div>
 						<div class="content__button">
-							<button data-img="headphone.png" data-price="30" data-title="Навушники" data-count="1"  data-price-summ="30" class="cart-btn w-100 js-card-add">Додати в корзину</button>
+							<button data-img="headphone.png" data-price="30" data-text="Premium Навушники" data-title="Навушники" data-count="1"  data-price-summ="30" class="cart-btn w-100 js-card-add">Додати в корзину</button>
 						</div>
 					</div>
 				</div>
@@ -99,7 +110,7 @@
 							<div class="price">$1300</div>
 						</div>
 						<div class="content__button">
-							<button data-img="airpods.png" data-price="50" data-title="Airpod" data-count="1"  data-price-summ="50" class="cart-btn w-100 js-card-add">Додати в корзину</button>
+							<button data-img="Macbook.jpg" data-price="1300" data-title="Apple Macbook Air" data-text="Apple Macbook Air M1 (Gold)" data-count="1"  data-price-summ="1300" class="cart-btn w-100 js-card-add">Додати в корзину</button>
 						</div>
 					</div>
 				</div>
@@ -115,7 +126,7 @@
 							<div class="price">$80</div>
 						</div>
 						<div class="content__button">
-							<button data-img="watch.png" data-price="80" data-title="Годиник" data-count="1"  data-price-summ="80" class="cart-btn w-100 js-card-add">Додати в корзину</button>
+							<button data-img="watch.png" data-price="80" data-title="Apple Watch" data-text="Premium цифровий годинник"  ata-count="1"  data-price-summ="80" class="cart-btn w-100 js-card-add">Додати в корзину</button>
 						</div>
 					</div>
 				</div>
@@ -131,7 +142,7 @@
 							<div class="price">$616</div>
 						</div>
 						<div class="content__button">
-							<button data-img="airpods.png" data-price="50" data-title="Airpod" data-count="1"  data-price-summ="50" class="cart-btn w-100 js-card-add">Додати в корзину</button>
+							<button data-img="ps5.jpg" data-price="616" data-title="Sony PlayStation 5" data-text="Ігрова приставка Sony PlayStation 5"  data-count="1"  data-price-summ="616" class="cart-btn w-100 js-card-add">Додати в корзину</button>
 						</div>
 					</div>
 				</div>
@@ -147,7 +158,7 @@
 							<div class="price">$50</div>
 						</div>
 						<div class="content__button">
-							<button data-img="airpods.png" data-price="50" data-title="Airpod" data-count="1"  data-price-summ="50" class="cart-btn w-100 js-card-add">Додати в корзину</button>
+							<button data-img="airpods.png" data-price="50" data-title="Airpod" data-text="Premium black airpod" data-count="1"  data-price-summ="50" class="cart-btn w-100 js-card-add">Додати в корзину</button>
 						</div>
 					</div>
 				</div>
@@ -161,21 +172,15 @@
 	</div>
 
 
-	<div class="cart">
-		<ul class="cart-list-products js-list-products hide">
-			<li class="no-result">
-				<img src="img/empty-cart.png" alt="" class="no-result__img">
-				<h3	class="no-result__title">Корзина пуста</h3>
-			</li>
+	<footer class="py-3 my-4">
+		<ul class="nav justify-content-center border-bottom pb-3 mb-3">
+			<li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Головна</a></li>
+			<li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Каталог</a></li>
+			<li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Перегляд товару</a></li>
+			<li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Контакти</a></li>
 		</ul>
-		
-
-		<div class="cart-button btn-222 js-card-button">
-			<div class="order-num js-order-num hide">0</div>
-			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
-		</div>
-	</div>
-
+		<p class="text-center text-body-secondary">&copy; 2023 Company, Inc</p>
+	</footer>
 
 	<script src="libs/jquery-3.6.4.min.js"></script>
 	<script src="libs/boostrap/bootstrap.bundle.min.js"></script>

@@ -56,7 +56,16 @@ function viewProducts()
 		$('.js-card-button .js-order-num').addClass('hide');
 
 		// Виводимо повідомлення про те, що товарів немає
-		listItems += `<li class="no-result">
+		listItems += `<div class="product__contant">
+							<ul class="product__cart">
+								<li class="product__cart-list position-relative">
+									<h2 class="title">У вашому кошику</h2>
+									<p class="product__remove position-absolute js-product-remove">x</p>
+									
+								</li>
+							</ul>
+						</div>
+					<li class="no-result">
 						<img src="img/empty-cart.png" alt="" class="no-result__img">
 						<h3	class="no-result__title">Корзина пуста</h3>
 					</li>`;
@@ -65,25 +74,46 @@ function viewProducts()
 		// Якщо елемент цифри прихований показуємо цей елемент
 		$('.js-card-button .js-order-num').removeClass('hide');
 
+		listItems += `<div class="product__contant">
+							<ul class="product__cart">
+								<li class="product__cart-list position-relative">
+									<h2 class="title">У вашому кошику</h2>
+									<p class="product__remove position-absolute js-product-remove">x</p>
+									
+								</li>
+							</ul>
+						</div>`
+
 		//Перебераються товари
 		$.each(cart, function(index, product) {
 
 			//Наповнюємо списком товарам
 			listItems += `<li class="cartItem-product">
-							<img src="img/catalog/${product.img}" alt="" class="cartItem-product__img">
-							<h3 class="cartItem-product__title">${product.title}</h3>
-							<div class="button-count">
-							    <button class="button-count__btn button-count__btn-add js-cart-input-count" data-for-input="#cart-count-1" data-type="plus">+</button>
-							    <input type="text" min="1" class="button-count__input js-set-count" value="${product.count}" id="cart-count-1" />
-							    <button class="button-count__btn button-count__btn-minus js-cart-input-count" data-for-input="#cart-count-1" data-type="minus">-</button>
+							<div class="product d-flex position-relative">
+								<div class="product__img">
+									<img src="img/catalog/${product.img}" alt="" class="product__img-card w-100">
+								</div>
+								<div class="product__info">
+									<p class="product__info-text">${product.title}</p>
+									<h2 class="product__info-title">${product.text}</h2>
+									<div class="product__count d-flex">
+										<div class="button-count">
+											<button class="button-count__btn button-count__btn-add js-cart-input-count" data-for-input="#cart-count-1" data-type="plus">+</button>
+											<input type="text" min="1" class="button-count__input js-set-count" value="${product.count}" id="cart-count-1" />
+											<button class="button-count__btn button-count__btn-minus js-cart-input-count" data-for-input="#cart-count-1" data-type="minus">-</button>
+										</div>
+										<div class="product__price">
+											<p class="product__price-info">${product.priceSumm}</p>
+										</div>
+									</div>
+								</div>
+								<p class="cartItem-product__remove d-flex justify-content-center align-items-center position-absolute js-cart-remove" data-premove-id="${index}">x</p>
 							</div>
-							<p class="cartItem-product__price">${product.priceSumm}</p>
-							<p class="cartItem-product__remove js-cart-remove" data-premove-id="${index}">x</p>
 						</li>`;
 
 		});
 
-		listItems += `<a href="cart.html" class="cart__order-btn">Оформити замовлення</a>`;
+		listItems += `<a href="cart.html" class="cart__order-btn w-100 d-block text-center">Оформити замовлення</a>`;
 	}
 
 	//Виводимо цифру в html 
@@ -99,8 +129,17 @@ viewProducts();
 
 
 // Показуємо або приховуємо корзину
-$(".js-card-button").click(() => $(".js-list-products").toggleClass('hide'));
+$(document).ready(function() {
+  $(".js-card-button").click(function() {
+    $(".js-list-products").removeClass('hide');
+    $(".js-list-products").addClass('show');
+  });
 
+  $(".js-product-remove").click(function() {
+  	$(".js-list-products").removeClass('show');
+    $(".js-list-products").addClass('hide');
+  });
+});
 
 
 /**

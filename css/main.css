@@ -1,6 +1,7 @@
 :root {
 	
 	--pr: #387fff;
+	--pr-bl: #333;
 	--pr-rgba: 56, 127, 255;
 
 	--text-font: 'Roboto', sans-serif;
@@ -61,4 +62,9 @@ svg {
 
 .no-result {
 	text-align: center;
+    margin-top: 100px;
+}
+
+.footer{
+	background: #fff;
 }
