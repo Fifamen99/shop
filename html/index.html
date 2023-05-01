@@ -1,4 +1,7 @@
-
+@@include_once('./blocks/head.html',{
+	title: "Головна сторінка",
+	bodyClass: "h-100 d-flex justify-content-center align-items-center page-login"
+})
 
 
 	<form action="catalog.html" class="form-auth" method="POST">
@@ -24,8 +27,4 @@
 
 
 
-	<script src="node_modules/jquery/dist/jquery.min.js"></script>
-	<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-	<script src="js/script.js"></script>
-</body>
-</html>
+@@include_once('./blocks/footer.html')

@@ -14,8 +14,6 @@
 	--container-lg-padding: 52px;
 }
 
-
-
 * {
 	box-sizing: border-box;
 }
@@ -38,6 +36,9 @@ svg {
 	position: relative;
 }
 
+.tolik-test2222{
+	
+}
 
 
 .container{
@@ -45,9 +46,6 @@ svg {
 	margin: 0 auto;
 	padding: 0 var(--container-padding);
 	position: relative;
-}
-
-.container {
 	max-width: var(--container-lg);
 }
 

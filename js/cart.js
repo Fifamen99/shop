@@ -78,7 +78,7 @@ function viewProducts()
 							<ul class="product__cart">
 								<li class="product__cart-list position-relative">
 									<h2 class="title">У вашому кошику</h2>
-									<p class="product__remove position-absolute js-product-remove">x</p>
+									<p class="product__remove position-absolute js-cart-toggle-show">x</p>
 									
 								</li>
 							</ul>
@@ -93,7 +93,7 @@ function viewProducts()
 								<div class="product__img">
 									<img src="img/catalog/${product.img}" alt="" class="product__img-card w-100">
 								</div>
-								<div class="product__info">
+								<div class="product__info d-flex justify-content-center flex-column">
 									<p class="product__info-text">${product.title}</p>
 									<h2 class="product__info-title">${product.text}</h2>
 									<div class="product__count d-flex">
@@ -113,7 +113,15 @@ function viewProducts()
 
 		});
 
-		listItems += `<a href="cart.html" class="cart__order-btn w-100 d-block text-center">Оформити замовлення</a>`;
+		listItems += `<div class="general__sum d-flex justify-content-between">
+							<div class="general__sum-text">
+								<span class="total-text">Разом:</span>
+							</div>
+							<div class="general__sum-price">
+								<span class="total-price">0</span>
+							</div>
+						</div>
+					<a href="cart.html" class="cart__order-btn d-block text-center">Оформити замовлення</a>`;
 	}
 
 	//Виводимо цифру в html 
@@ -129,16 +137,8 @@ viewProducts();
 
 
 // Показуємо або приховуємо корзину
-$(document).ready(function() {
-  $(".js-card-button").click(function() {
-    $(".js-list-products").removeClass('hide');
-    $(".js-list-products").addClass('show');
-  });
-
-  $(".js-product-remove").click(function() {
-  	$(".js-list-products").removeClass('show');
-    $(".js-list-products").addClass('hide');
-  });
+$(document).on("click", ".js-cart-toggle-show", function() {
+	$(".js-list-products").toggleClass('hide');
 });
 
 

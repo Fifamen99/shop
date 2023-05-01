@@ -2,7 +2,7 @@
 	background: #2148C0;
 	background-image: url("../img/page-login/bg-detile1.png"), url("../img/page-login/bg-detile2.png");
 	background-repeat: no-repeat;
-    background-position: top right, bottom left;
+   background-position: top right, bottom left;
 }
 
 .form-auth {
