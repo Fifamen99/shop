@@ -1,123 +1,104 @@
-@@include('head.html', {
-	title: "Каталог товарів",
-	bodyClass: "page-catalog"
+@@include('system--head.html', {
+	title: "Перегляд товару",
+	bodyClass: "page-product"
 })
 
 
-@@include('menu.html')
+@@include('block--menu.html')
 
 
 
-<div class="catalog">
+
+<div class="productPage w-100">
    <div class="container">
-      <h1 class="catalog__title">Каталог товарів</h1>
-
-      <div class="catalog__list d-flex flex-wrap justify-content-between align-items-center position-relative">
-
-         <div class="card position-relative">
-            <img class="cart__img w-100" src="img/catalog/Iphone 14pro.jpg" alt="">
-            <div class="content w-100 position-absolute">
-               <div class="content__row">
-                  <div class="details">
-                     <h2 class="details__title">Apple Iphone 14pro</h2>
-                     <p class="details__text">Apple Iphone 14pro (Deep Purple)</p>
+      <div class="product__view d-flex">
+         <div class="product__view-slider">
+            <div class="product-imgs">
+               <div class="img-display">
+                  <div class="img-showcase d-flex w-100">
+                     <img class="slider-img" src="img/productPage/airpots.jpg" alt="">
+                     <img class="slider-img" src="img/productPage/airpots2.jpg" alt="">
+                     <img class="slider-img" src="img/productPage/airpots3.jpg" alt="">
+                     <img class="slider-img" src="img/productPage/airpots4.jpg" alt="">
                   </div>
-                  <div class="price">$1100</div>
                </div>
-               <div class="content__button">
-                  <button data-img="Iphone 14pro.jpg" data-price="1100" data-title="Apple Iphone 14pro" data-text="Apple Iphone 14pro (Deep Purple)" data-count="1"  data-price-summ="1100" class="cart-btn w-100 js-card-add">Додати в корзину</button>
+               <div class="img-select d-flex">
+                  <div class="img-item">
+                     <a href="#" data-id="1">
+                        <img class="slider-img w-100 d-block" src="img/productPage/airpots.jpg" alt="">
+                     </a>
+                  </div>
+                  <div class="img-item">
+                     <a href="#" data-id="2">
+                        <img class="slider-img w-100 d-block" src="img/productPage/airpots2.jpg" alt="">
+                     </a>
+                  </div>
+                  <div class="img-item">
+                     <a href="#" data-id="3">
+                        <img class="slider-img w-100 d-block" src="img/productPage/airpots3.jpg" alt="">
+                     </a>
+                  </div>
+                  <div class="img-item">
+                     <a href="#" data-id="4">
+                        <img class="slider-img w-100 d-block" src="img/productPage/airpots4.jpg" alt="">
+                     </a>
+                  </div>
                </div>
             </div>
          </div>
-
-         <div class="card position-relative">
-            <img class="cart__img w-100" src="img/catalog/headphone.png" alt="">
-            <div class="content w-100 position-absolute">
-               <div class="content__row">
-                  <div class="details">
-                     <h2 class="details__title">Навушники</h2>
-                     <p class="details__text">Premium Навушники</p>
-                  </div>
-                  <div class="price">$30</div>
+         <div class="product__view-info">
+            <div class="product__contant-info">
+               <h2 class="product__view-title">Навушники Apple AirPods Pro with Magsafe 2021 (MLWK3)</h2>
+               <div class="product__info-articl d-flex">
+                  <p class="product__code">Код : 69739</p>
+                  <p class="product__vendor-code">Артикул : MLWK3</p>
                </div>
-               <div class="content__button">
-                  <button data-img="headphone.png" data-price="30" data-text="Premium Навушники" data-title="Навушники" data-count="1"  data-price-summ="30" class="cart-btn w-100 js-card-add">Додати в корзину</button>
+               <div class="star-box">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                  </svg>
+               </div>
+               <div class="product__discount">
+                  <div class="price-old d-flex align-items-center position-relative">
+                     <span class="product__discount-price">8 441 грн</span>
+                     <strong class="product__discount-percent">-246</strong>
+                  </div>
+               </div>
+               <div class="price">
+                  <div class="price__holder-usd d-flex">
+                     <div class="price-uah position-relative price__usd-new">8 195 грн</div>
+                     <div class="price__usd-new">216 $</div>
+                  </div>
+                  <div class="cashback-holder">
+                     <span class="user__bonus-value">кешбек&nbsp<b>41 грн</b></span>
+                  </div>
+               </div>
+               <div class="product_buy-btn">
+                  <a href="#" class="buy-btn w-100">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                     Купити
+                  </a>
                </div>
             </div>
          </div>
-
-         <div class="card position-relative">
-            <img class="cart__img w-100" src="img/catalog/Macbook.jpg" alt="">
-            <div class="content w-100 position-absolute">
-               <div class="content__row">
-                  <div class="details">
-                     <h2 class="details__title">Apple Macbook Air</h2>
-                     <p class="details__text">Apple Macbook Air M1 (Gold)</p>
-                  </div>
-                  <div class="price">$1300</div>
-               </div>
-               <div class="content__button">
-                  <button data-img="Macbook.jpg" data-price="1300" data-title="Apple Macbook Air" data-text="Apple Macbook Air M1 (Gold)" data-count="1"  data-price-summ="1300" class="cart-btn w-100 js-card-add">Додати в корзину</button>
-               </div>
-            </div>
-         </div>
-
-         <div class="card position-relative d-flex">
-            <img class="cart__img w-100" src="img/catalog/watch.png" alt="">
-            <div class="content w-100 position-absolute">
-               <div class="content__row">
-                  <div class="details">
-                     <h2 class="details__title">Apple Watch</h2>
-                     <p class="details__text">Premium цифровий годинник</p>
-                  </div>
-                  <div class="price">$80</div>
-               </div>
-               <div class="content__button">
-                  <button data-img="watch.png" data-price="80" data-title="Apple Watch" data-text="Premium цифровий годинник"  ata-count="1"  data-price-summ="80" class="cart-btn w-100 js-card-add">Додати в корзину</button>
-               </div>
-            </div>
-         </div>
-
-         <div class="card position-relative">
-            <img class="cart__img w-100" src="img/catalog/ps5.jpg" alt="">
-            <div class="content w-100 position-absolute">
-               <div class="content__row">
-                  <div class="details">
-                     <h2 class="details__title">Sony PlayStation 5</h2>
-                     <p class="details__text">Ігрова приставка Sony PlayStation 5</p>
-                  </div>
-                  <div class="price">$616</div>
-               </div>
-               <div class="content__button">
-                  <button data-img="ps5.jpg" data-price="616" data-title="Sony PlayStation 5" data-text="Ігрова приставка Sony PlayStation 5"  data-count="1"  data-price-summ="616" class="cart-btn w-100 js-card-add">Додати в корзину</button>
-               </div>
-            </div>
-         </div>
-
-         <div class="card position-relative">
-            <img class="cart__img w-100" src="img/catalog/airpods.png" alt="">
-            <div class="content w-100 position-absolute">
-               <div class="content__row">
-                  <div class="details">
-                     <h2 class="details__title">Apple Airpod</h2>
-                     <p class="details__text">Premium black airpod</p>
-                  </div>
-                  <div class="price">$50</div>
-               </div>
-               <div class="content__button">
-                  <button data-img="airpods.png" data-price="50" data-title="Airpod" data-text="Premium black airpod" data-count="1"  data-price-summ="50" class="cart-btn w-100 js-card-add">Додати в корзину</button>
-               </div>
-            </div>
-         </div>
-
-         
-
-
       </div>
-
    </div>
 </div>
 
 
 
-@@include('footer.html')
+
+@@include('block--footer.html')
+@@include('system--footer.html')

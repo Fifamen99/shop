@@ -1,4 +1,4 @@
-@@include('head.html',{
+@@include('system--head.html',{
 	title: "Головна сторінка",
 	bodyClass: "h-100 d-flex justify-content-center align-items-center page-login"
 })
@@ -18,7 +18,8 @@
 		  	<img src="img/page-login/lock.png" alt="" class="form-auth__input-icon position-absolute top-50 translate-middle-y">
 			<input type="password" class="form-control form-auth__input" placeholder="Пароль" name="pass" value="user">
 		</div>
-		<button class="btn btn-light w-100 form-auth__btn">Авторизуватися</button>
+		<!-- <button class="btn btn-light w-100 form-auth__btn">Авторизуватися</button> -->
+		<a href="catalog.html" class="btn btn-light w-100 form-auth__btn">Авторизуватися</a>
 		<div class="text-end form-auth__remember mt-2">
 			<a href="recover-password.html" class="form-auth__remember-link btn btn-link">Забули пароль?</a>
 		</div>
@@ -28,4 +29,4 @@
 
 
 
-@@include('footer.html')
+@@include('system--footer.html')
