@@ -12,24 +12,10 @@
    <div class="container">
       <h1 class="catalog__title">Каталог товарів</h1>
 
-      <div class="catalog__list d-flex flex-wrap justify-content-between align-items-center position-relative">
+      <div class="catalog__list js-view-catalog d-flex flex-wrap justify-content-between align-items-center position-relative">
 
-         <div class="card position-relative">
-            <img class="cart__img w-100" src="img/catalog/Iphone 14pro.jpg" alt="">
-            <div class="content w-100 position-absolute">
-               <div class="content__row">
-                  <div class="details">
-                     <h2 class="details__title">Apple Iphone 14pro</h2>
-                     <p class="details__text">Apple Iphone 14pro (Deep Purple)</p>
-                  </div>
-                  <div class="price">$1100</div>
-               </div>
-               <div class="content__button">
-                  <button data-img="Iphone 14pro.jpg" data-price="1100" data-title="Apple Iphone 14pro" data-text="Apple Iphone 14pro (Deep Purple)" data-count="1"  data-price-summ="1100" class="cart-btn w-100 js-card-add">Додати в корзину</button>
-               </div>
-            </div>
-         </div>
-
+         
+<!-- 
          <div class="card position-relative">
             <img class="cart__img w-100" src="img/catalog/headphone.png" alt="">
             <div class="content w-100 position-absolute">
@@ -108,7 +94,7 @@
                   <button data-img="airpods.png" data-price="50" data-title="Airpod" data-text="Premium black airpod" data-count="1"  data-price-summ="50" class="cart-btn w-100 js-card-add">Додати в корзину</button>
                </div>
             </div>
-         </div>
+         </div> -->
 
          
 
@@ -121,4 +107,6 @@
 
 
 @@include('block--footer.html')
-@@include('system--footer.html')
+@@include('system--footer.html', {
+   'viewPage': 'catalog'
+})

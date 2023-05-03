@@ -24,7 +24,7 @@ function viewOrderProducts()
 	        		<input type="hidden" name="product[0][count]" value="${product.count}">
 
 	        		<div class="cartItem-order-product__text">
-		        		<img src="img/catalog/${product.img}" alt="" class="cartItem-order-product__img">
+		        		<img src="${product.img}" alt="" class="cartItem-order-product__img">
 		        		<h3 class="cartItem-order-product__title">${product.title}</h3>
 	        		</div>
 	        		<div class="cartItem-order-product__numbers">

@@ -62,6 +62,17 @@
    </div>
 </header>
 
+<div class="cart" style="position: fixed; bottom: 20px; right: 20px;">
+   <ul class="cart-list-products position-absolute js-list-products hide">
+      
+   </ul>
+   
+   <div class="cart-button btn-222 position-relative js-card-button js-cart-toggle-show">
+      <div class="order-num d-flex justify-content-center align-items-center js-order-num hide">0</div>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+   </div>
+</div>
+
 
 
 
@@ -165,6 +176,12 @@
    </ul>
    <p class="text-center text-body-secondary ">&copy; 2023 Company, Inc</p>
 </footer>
+
+<script>
+   const params = {
+      page: 'page-login'
+   }
+</script>
 
 <script src="libs/jquery-3.6.4.min.js"></script>
 <script src="libs/boostrap/bootstrap.bundle.min.js"></script>

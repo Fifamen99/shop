@@ -84,6 +84,8 @@ function viewProducts()
 							</ul>
 						</div>`
 
+
+
 		//Перебераються товари
 		$.each(cart, function(index, product) {
 
@@ -91,16 +93,16 @@ function viewProducts()
 			listItems += `<li class="cartItem-product">
 							<div class="product d-flex position-relative">
 								<div class="product__img">
-									<img src="img/catalog/${product.img}" alt="" class="product__img-card w-100">
+									<img src="img/catalog/${product.id}.jpg" alt="" class="product__img-card w-100">
 								</div>
 								<div class="product__info d-flex justify-content-center flex-column">
 									<p class="product__info-text">${product.title}</p>
 									<h2 class="product__info-title">${product.text}</h2>
 									<div class="product__count d-flex">
 										<div class="button-count">
-											<button class="button-count__btn button-count__btn-add js-cart-input-count" data-for-input="#cart-count-1" data-type="plus">+</button>
-											<input type="text" min="1" class="button-count__input js-set-count" value="${product.count}" id="cart-count-1" />
-											<button class="button-count__btn button-count__btn-minus js-cart-input-count" data-for-input="#cart-count-1" data-type="minus">-</button>
+											<button class="button-count__btn button-count__btn-add js-cart-input-count" data-for-input="#cart-count-${index}" data-type="plus" data-product-index="${index}">+</button>
+											<input type="text" min="1" class="button-count__input js-set-count" value="${product.count}" id="cart-count-${index}" />
+											<button class="button-count__btn button-count__btn-minus js-cart-input-count" data-for-input="#cart-count-${index}" data-type="minus" data-product-index="${index}">-</button>
 										</div>
 										<div class="product__price">
 											<p class="product__price-info">${product.priceSumm}</p>
@@ -111,17 +113,20 @@ function viewProducts()
 							</div>
 						</li>`;
 
+					
 		});
+		
 
 		listItems += `<div class="general__sum d-flex justify-content-between">
 							<div class="general__sum-text">
 								<span class="total-text">Разом:</span>
 							</div>
 							<div class="general__sum-price">
-								<span class="total-price">0</span>
+								<span class="total-price js-total-price">0</span>
 							</div>
 						</div>
 					<a href="cart.html" class="cart__order-btn d-block text-center">Оформити замовлення</a>`;
+
 	}
 
 	//Виводимо цифру в html 
@@ -129,6 +134,9 @@ function viewProducts()
 
 	// Виводимо в HTML товари
 	$('.js-list-products').html(listItems);
+
+	// Підрахунок суми
+	totalSum();
 }
 
 // Вивід товарів 
@@ -142,26 +150,31 @@ $(document).on("click", ".js-cart-toggle-show", function() {
 });
 
 
-/**
- * Кнопка добавлення в корзину
- */
-$(".js-card-add").click(function()
-{
+$(document).on("click", ".js-card-add", function() {
 	// Витягуємо елемент по якому був клік
 	const card = $(this);
-
+ 
 	// Інформація про товар
 	const product = card.data();
-
-	// Записуємо інформацію про товар до загального списку
-	cart.push(product);
-
+ 
+	// Знаходимо індекс товару в кошику за його ID
+	const index = cart.findIndex(item => item.id === product.id);
+ 
+	if (index >= 0) {
+	  // Якщо товар вже є в кошику, збільшуємо його кількість
+	  cart[index].count += 1;
+	} else {
+	  // Якщо товару немає в кошику, додаємо його
+	  cart.push(product);
+	}
+ 
 	// Зберігаємо товар
 	saveCart();
-
+ 
 	// Виводимо в HTML товари
 	viewProducts();	
-});
+ });
+ 
 
 
 
@@ -225,6 +238,26 @@ $(".js-set-count").change(function()
 
 
 
+//Вивід загальної суми
+function totalSum() {
+
+	// Зміна для збереження загальної суми
+	let sumAllProducts = 0;
+
+	// Перебереємо всі товари в корзині
+	$.each(cart, function(index, product) {
+		
+		// Обчислення суми товару
+		let summProduct = product.count * product.price;
+
+		// Обчислення суми всіх товарів
+		sumAllProducts = sumAllProducts + summProduct;
+	})
+
+	// Вивід загальної суми в html
+	$('.js-total-price').html(sumAllProducts);
+}
+
 // Вішаємо клік на кнопку добавлення кількості товарів
 $(document).on('click', '.js-cart-input-count', function(event) {
 	
@@ -244,20 +277,31 @@ $(document).on('click', '.js-cart-input-count', function(event) {
 	const intupCount = Number(input.val());
 	
 	// Змінна призначена для цифри кількості
-	let count = 0;
+	let count = 1;
 
 	// Збільшуємо кількість або зменшуємо кількість
 	if(type == 'plus'){
 		count = intupCount + 1;
 	} else {
 
-		if(intupCount > 0 ){
+		if(intupCount > 1){
 			count = intupCount - 1;
 		}
 	}
 
-	
-
 	// Збільшуємо кількість в input
 	input.val(count);
+
+	// Індекс товару якому змінюємо кількість
+	let indexProduct = el.data('product-index');
+
+	// Зберігаємо кількість доданих товарів в корзині
+	cart[indexProduct].count = count;
+
+	// Перерахунок суми 
+	totalSum();
+	
+	// Зберігаємо товар
+	saveCart(cart);
 });
+
